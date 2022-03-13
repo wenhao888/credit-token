@@ -15,3 +15,4 @@
 /client/.prettierrc.js
 /client/.stylelintrc.js
 /client/.vscode/
+.DS_Store
