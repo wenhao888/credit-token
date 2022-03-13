@@ -1,0 +1,17 @@
+/package-lock.json
+/node_modules/
+/client/package-lock.json
+/client/yarn.lock
+/client/node_modules/
+/client/build/
+/client/src/contracts/
+.DS_Stroe/
+/.idea/
+/client2/src/contracts/
+/client/.editorconfig
+/client/.eslintignore
+/client/.eslintrc.js
+/client/.prettierignore
+/client/.prettierrc.js
+/client/.stylelintrc.js
+/client/.vscode/

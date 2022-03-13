@@ -1,0 +1,62 @@
+#pragma version 4
+byte "@contract_id"
+pop
+
+txn Amount
+bz escrow_opt_in
+
+txn TxID
+arg 0
+addr BJRLVGSFC4IDXEB2B3GJ62QRJAHDDZW7JBWLSUFQ2DUD3IRNC4DHX6XELM
+ed25519verify
+bz failed
+
+arg 1
+byte "@event_id_1"
+==
+gtxn 0 Receiver
+addr @receiver_1
+==
+gtxn 1 Receiver
+addr @receiver_2
+==
+&&
+gtxn 0 Amount
+int 2
+int @amount
+/
+==
+gtxn 1 Amount
+int 2
+int @amount
+/
+==
+//&&
+
+&&
+&&
+
+arg 1
+byte "@event_id_2"
+==
+txn Receiver
+addr @receiver_3
+==
+txn Amount
+int @amount
+==
+&&
+&&
+
+
+||
+
+return
+
+failed:
+int 0
+return
+
+escrow_opt_in:
+int 1
+return

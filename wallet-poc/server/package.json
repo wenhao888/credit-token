@@ -1,0 +1,31 @@
+{
+  "name": "server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "umi build && cp ./dist/index.html ./server/views/index.ejs && rm -f ./dist/index.html",
+    "start:www": "node server/bin/www",
+    "start:mon": "nodemon src",
+    "start": "node run build && concurrently npm:start:*"
+  },
+  "dependencies": {
+    "algosdk": "^1.10.0",
+    "axios": "^0.21.1",
+    "coinbase": "^2.0.8",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "docusign-esign": "^5.14.0",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "ipfs-http-client": "^50.1.1",
+    "it-all": "^1.0.5",
+    "it-concat": "^2.0.0",
+    "morgan": "~1.9.1",
+    "pdf-merger-js": "^3.2.1",
+    "pdfkit": "^0.13.0",
+    "querystring": "^0.2.1",
+    "umi": "^3.5.19",
+    "uuid": "^8.3.2"
+  }
+}
