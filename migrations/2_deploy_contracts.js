@@ -1,5 +1,5 @@
 const ConvertLib = artifacts.require("ConvertLib");
-// const SimpleStorage = artifacts.require("SimpleStorage");
+const SimpleStorage = artifacts.require("SimpleStorage");
 const CreditToken  = artifacts.require("CreditToken")
 
 module.exports = function(deployer) {
@@ -7,4 +7,5 @@ module.exports = function(deployer) {
   // deployer.link(ConvertLib, MetaCoin);
   // deployer.deploy(MetaCoin);
   deployer.deploy(CreditToken);
+  deployer.deploy(SimpleStorage);
 };
